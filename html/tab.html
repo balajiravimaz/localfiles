@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buddha Website</title>
+    <link rel="stylesheet" href="css/budh.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <body>
+    <div class="container" id="contain">
+      <div class="navbar">
+        <div class="logo">
+          <img src="img/logo.png" />
+        </div>
+        <nav id="menu">
+          <ul>  
+            <li>
+              <a href="#">ARTIST</a>
+            </li>
+            <li>
+              <a href="#">EXHIBITION</a>
+            </li>
+            <li>
+              <a href="#">EVENTS</a>
+            </li>
+            <li>
+              <a href="#">CONTACTS US</a>
+            </li>
+          </ul>
+          <i class="fa fa-close close fa-2x" onclick="closemenu()"></i>
+        </nav>
+        <i class="fa fa-bars bar fa-lg" onclick="openmenu()"></i>
+      </div>
+      <div class="cont-row">
+        <div class="left">
+          <div class="search">
+            <img src="img/s.png" />
+            <input type="text" />
+          </div>
+          <hr />
+          <h1>Every Artist writes his own autobiography</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cumque
+            modi iure alias quasi sapiente ipsam, eaque unde nesciunt illo
+            labore qui vel et minima!
+          </p>
+          <div class="ind">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="right">
+          <img src="img/budha.png" />
+        </div>
+      </div>
+      <div class="social">
+        <a href=#><i class="fa fa-twitter"></i></a>
+        <a href=#><i class="fa fa-instagram"></i></a>
+        <a href=#><i class="fa fa-facebook"></i></a>
+      </div>
+    </div>
+    <script>
+        var menu=document.getElementById("menu");
+        var cont=document.getElementsByClassName("container");
+        function closemenu(){
+            menu.style.right="-100%";
+            cont.style.width="0";
+        }
+        function openmenu(){
+            menu.style.right="0";
+            cont.style.width="90%";
+        }
+    </script>
+  </body>
+</html>

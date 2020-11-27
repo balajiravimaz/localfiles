@@ -1,0 +1,31 @@
+#area-content {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+#area-content .heading h1 {
+  color: purple;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+#area-content .heading p {
+  color: #1b1b1b;
+  font-size: 0.6rem;
+  margin-bottom: 10px;
+}
+
+#area-content .cards .card {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#area-content .cards .card .img-user {
+  background: url("https://randomuser.me/api/portraits/men/86.jpg") no-repeat center center;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=content-area.css.map */

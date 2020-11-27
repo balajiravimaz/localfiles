@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+section {
+  padding: 100px;
+}
+.banner {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url("../img/banner.jpg");
+  background-position: right;
+  background-size: cover;
+  color: #fff;
+}
+
+.banner h2 span {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.banner h2 {
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1.7em;
+}
+.banner h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #2196fe;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn:hover {
+  letter-spacing: 4px;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  padding: 40px 100px;
+  transition: 0.5s;
+}
+header.sticky {
+  padding: 20px 60px;
+  background: #fff;
+  box-sizing: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+header.sticky .logo {
+  color: #111;
+}
+header.sticky ul li a {
+  color: #111;
+}
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+header ul {
+  position: relative;
+  display: flex;
+}
+header ul li {
+  list-style: none;
+}
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  margin: 0 15px;
+}
+header ul li a:hover {
+  color: #2196fe;
+}
+
+/* About Secton */
+
+.heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111;
+}
+.content {
+  position: relative;
+  display: flex;
+}

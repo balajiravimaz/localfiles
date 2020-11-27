@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  overflow: auto;
+  line-height: 1.5em;
+}
+
+#cont {
+  width: 70%;
+  margin: 10px auto;
+  line-height: 1.5em;
+}
+
+p {
+  font-size: 17px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 20px 20px;
+}
+
+h2 {
+  font-size: 29px;
+  margin: 10px 10px;
+}
+
+h3 {
+  font-size: 25px;
+  margin: 20px 10px;
+}
+#main-head {
+  border-bottom: 4px solid #4ea0d8;
+}
+#main-head img {
+  display: block;
+  margin: auto;
+}
+#main-content {
+  text-align: center;
+  padding: 10px;
+  color: #333;
+  margin-bottom: 20px;
+}
+#main-content p {
+  text-align: center;
+}
+#sub1 {
+  width: 48%;
+  float: left;
+}
+#sub2 {
+  width: 48%;
+  float: right;
+  background-color: #f4f4f4;
+  border: 1px solid #4ea0d8;
+  border-radius: 5px;
+}
+.clearfix {
+  clear: both;
+}
+.points {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.points li {
+  margin-bottom: 33px;
+}
+.points,
+li,
+p {
+  text-align: justify;
+  font-size: 14px;
+}
+.points li img {
+  float: left;
+  padding: 10px 20px;
+}
+#test {
+  margin: 50px 0;
+}
+#test img {
+  float: left;
+  margin-right: 20px;
+}
+#main-foot {
+  border-top: 2px solid #ddd;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+}
+#sub2,
+#main-form {
+  padding: 10px 15px 15px 15px;
+}
+#main-form div {
+  margin-bottom: 20px;
+}
+#main-form label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bolder;
+}
+#main-form input[type="text"],
+#main-form input[type="email"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 25px;
+  width: 71%;
+}
+#main-form button {
+  padding: 12px 17px;
+  color: #fff;
+  background-color: #fa6e3e;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  float: right;
+}
+#main-form button:hover {
+  background-color: #d55427;
+  cursor: pointer;
+}
+#main-form span {
+  padding-top: 10px;
+  display: inline-block;
+}
+#cont-foot {
+  border-top: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+#sec-foot {
+  margin-top: 10px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+#sec-foot p {
+  font-size: 13px;
+  font-style: italic;
+  color: #444;
+  text-align: center;
+  padding: 10px 15px;
+}
+#sec-head {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding: 3px 0 10px 10px;
+}
+blockquote {
+  font-style: italic;
+}
+@media (max-width: 960px) {
+  #sub1,
+  #sub2 {
+    float: none;
+    width: 100%;
+  }
+}

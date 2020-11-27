@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/anim.css">
+    <title>Animations</title>
+</head>
+<body>
+    <!-- Section 1 -->
+    <section id="page-1" class="page">
+        <h2>Welcome to My Presentation</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat sint voluptas vitae provident, qui voluptatem perferendis harum commodi? Blanditiis sapiente amet ad numquam quia ipsa tempora corporis provident ratione nulla aut possimus, nam suscipit soluta dicta delectus labore earum animi.</p>
+<div>
+    <a href="#page-2"class="btn">Next page <i class="fa fa-arrow-circle-down"></i></a>
+</div>
+    </section>
+    <section id="page-2" class="page">
+        <h2>Welcome to My Presentation</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat sint voluptas vitae provident, qui voluptatem perferendis harum commodi? Blanditiis sapiente amet ad numquam quia ipsa tempora corporis provident ratione nulla aut possimus, nam suscipit soluta dicta delectus labore earum animi.</p>
+<div>
+    <a href="#page-1"class="btn">Previous page <i class="fa fa-arrow-circle-up"></i></a>
+    <a href="#page-3"class="btn">Next page <i class="fa fa-arrow-circle-down"></i></a>
+</div>
+    </section>
+    <section id="page-3" class="page">
+        <h2>Welcome to My Presentation</h2>
+        <div class="img">
+        <img src="img/logo1.png">
+        <img src="img/logo2.png">
+        <img src="img/logo3.png">
+    </div>
+<div>
+    <a href="#page-2"class="btn">Previous page <i class="fa fa-arrow-circle-up"></i></a>
+</div>
+    </section>
+    <script>
+        window.addEventListener("scroll", function(){
+            const page2=document.getElementById("page-2");
+            const page3=document.getElementById("page-3");
+            const img=document.querySelector(".img");
+            page2.classList.toggle("head", scrollY > 100);
+            page3.classList.toggle("head", scrollY > 700);
+            img.classList.toggle("img", scrollY > 700);
+        })
+    </script>
+</body>
+</html>

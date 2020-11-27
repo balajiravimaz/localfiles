@@ -1,0 +1,133 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	font-size: 1rem;
+	color: #404040;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+}
+h1{
+	font-size: 2.25rem;
+	font-weight: 200;
+	color: #fff;
+} 
+h1 + p{
+	color: #f18119;
+	font-size: 1.3125rem;
+	font-weight: 900;
+	margin: 0;
+}
+h2{
+	font-size: 1.3125rem;
+	margin:0;
+}
+h2 + p{
+	color: #f18119;
+	font-size: 1.3125rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-top:0;
+}
+
+strong{
+	font-weight: 900;
+}
+.small-text{
+	font-size: 0.625rem;
+}
+.top-text{
+	font-size: 0.625;
+	color: #f18119;
+	margin: 0;
+	padding-top: 2px;
+	font-weight: 900;
+	border-top:5px solid #f18119;
+	border-image: linear-gradient(right, #ff713b, #ffa51d) 1;
+	order:-1;
+}
+.intro{
+	background-image: url(ribs.jpg), linear-gradient(45deg,red,blue);
+	/*background-color: #ff0000;*/
+	background-blend-mode: multiply;
+	padding: 0 0.25em 1em;
+	display: flex;
+	background-size: cover;
+	background-position: center;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 50vh;
+}
+.main{
+	padding: 2em 1em;
+}
+.intro > *,
+.main > *{
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.cont{
+	width: 80%;
+	max-width: 300px;
+}
+input{
+	width:100%;
+	margin-bottom: 0.75em;
+	text-align: inherit;
+	font-family: inherit;
+	padding:0.25em;
+	border: 1px solid #404040;
+	border-radius: 5px;
+	transform: scale(1);
+	transition: transform 300ms;
+}
+input:focus{
+	transform: scale(1.1);
+}
+.btn{
+	width: 100%;
+	border-radius: 10px;
+	display: inline-block;
+	font-size: 0.825rem;
+	font-weight: 900;
+	padding:0.75em 1.5em;
+	cursor: pointer;
+	border:0;
+	background: -webkit-linear-gradient(right, #ff713b, #ffa51d);
+	background: -o-linear-gradient(right, #ff713b, #ffa51d);
+	background: linear-gradient(to left, #ff713b, #ffa51d);
+	color: #fff;
+	transform: scale(1);
+	transition: transform 300ms;
+}
+.btn:hover,
+.btn:focus{
+transform: scale(1.1);
+}
+/*
+Media Queries
+ */
+@media(min-width: 500px){
+	body{
+		font-size: 1.125rem;
+		display: flex;
+}
+h1{
+	font-size: 3.5rem;
+}
+h2,
+h1+p{
+	font-size: 1.75rem;
+}
+.intro,.main{
+width:50%;
+min-height:100vh;
+}
+.main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+}

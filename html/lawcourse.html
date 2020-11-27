@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>VIT-AP School of Law</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+    }
+
+    .header {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/home1.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 100px;
+    }
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+
+    nav {
+        text-align: right;
+        flex: 1;
+    }
+
+    .logo {
+        width: 120px;
+        cursor: pointer;
+
+    }
+
+    .vsl {
+        width: 110px;
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 3px;
+    }
+
+    nav ul li a:hover {
+        color: #ff6b3f;
+        font-weight: 600;
+    }
+
+    .content {
+        max-width: 600px;
+        margin-top: 15%;
+        color: #fff;
+    }
+
+    .content span {
+        color: #ff6b3f;
+    }
+
+    .content h1 {
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 1px;
+        margin: 15px 0;
+    }
+
+    .content p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .box {
+        margin-top: 20px;
+    }
+
+    .box a {
+        display: inline;
+    }
+
+    button {
+        width: 120px;
+        padding: 10px;
+        margin-right: 10px;
+        background-color: #ff6b3f;
+        cursor: pointer;
+        border-radius: 20px;
+        border: 1px solid #ff6b3f;
+        color: #fff;
+        transition: 0.1s ease-in;
+    }
+
+    button a {
+        color: #fff;
+    }
+
+    .btn {
+        background-color: transparent;
+        border: 1px solid #fff;
+    }
+
+    .box .clr {
+        color: #fff;
+    }
+
+    .box a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .side {
+        position: absolute;
+        width: 50px;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: #000;
+    }
+
+    .vslogo {
+        width: 10px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 30px 5px;
+    }
+
+    .social {
+        position: absolute;
+        bottom: 20px;
+        width: 50px;
+    }
+
+    .social a {
+        text-decoration: none;
+    }
+
+    .social a i {
+        color: #fff;
+        display: block;
+        margin: 20px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    button:hover {
+        border: 1px solid #ff6b3f;
+        background-color: transparent;
+    }
+
+    .btn:hover {
+        color: #ff6b3f;
+    }
+
+    a i:hover {
+        color: #ff6b3f;
+    }
+
+    .side a {
+        text-decoration: none;
+    }
+
+    .side a h1:hover {
+        color: #ff6b3f;
+    }
+
+    .about {
+        margin: 100px 0;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .title {
+        text-align: center;
+        color: #ff6b3f;
+        padding: 10px 0;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .sticky ul {
+        margin-right: 10em;
+    }
+
+    .sticky ul li a {
+        color: #000;
+    }
+
+    .sticky .logo {
+        position: absolute;
+        left: 20px;
+        color: #000;
+        background-color: #000;
+    }
+
+    .sticky .vsl {
+        position: absolute;
+        right: 20px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div id="navbar">
+                <img src="img/vitap.png" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Dates</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+                <img src="img/vsl.png" class="vsl">
+            </div>
+            <div class="content">
+                <h1>Join 5-years Integrated <span>BBA, LL.B </span> (Hons)</h1>
+                <p>Pursuing your legal career at VIT-AP School of Law (VSL), one of the India's leading academic
+                    institution.</p>
+                <div class="box">
+                    <a href="#"><button type="submit">Apply Now</button></a>
+                    <a href="#"><button type="submit" class="btn">Read More</button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="side">
+        <a href="#">
+            <h1 class="vslogo">VSL</h1>
+        </a>
+        <div class="social">
+            <a href=#><i class="fa fa-twitter"></i></a>
+            <a href=#><i class="fa fa-instagram"></i></a>
+            <a href=#><i class="fa fa-facebook"></i></a>
+        </div>
+    </div>
+    <div class="container">
+        <section class="about">
+            <h1 class="title">About School of Law</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque maiores mollitia, tempore minima qui quas
+                nostrum earum similique omnis. Molestias, earum. Quis nemo in eligendi, dolore odit quisquam omnis
+                voluptatem? Sit obcaecati esse, accusamus repellendus iure aliquid ducimus, nobis doloribus ipsa culpa
+                fugiat nihil quas facilis consectetur! Perspiciatis, quis officiis.</p>
+        </section>
+    </div>
+
+</body>
+
+</html>

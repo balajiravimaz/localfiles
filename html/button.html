@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: sans-serif;
+      display: flex;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: #19011d;
+      flex-direction: column;
+    }
+    a {
+      position: relative;
+      text-decoration: none;
+      background-color: #27022d;
+      padding: 15px 30px;
+      margin: 20px;
+      color: #fff;
+      letter-spacing: 1px;
+      border: 1px solid #000;
+      transition: 0.5s;
+      overflow: hidden;
+    }
+    a:hover {
+      background-color: #a41ee9;
+    }
+    a:nth-child(2):hover {
+      background-color: #ff3c7f;
+    }
+    a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+      background: linear-gradient(90deg, transparent, #fff, transparent);
+    }
+    a:hover::before {
+      right: 50%;
+    }
+  </style>
+  <body>
+    <a href="#">Shine Button </a>
+    <a href="#">Shining Button</a>
+  </body>
+</html>

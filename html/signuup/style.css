@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --pink: #ff4584;
+  --txt: #607d8b;
+  --hover: #f53677;
+}
+section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+section .imgbox {
+  position: relative;
+  width: 50%;
+  min-height: 100vh;
+}
+section .imgbox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(225deg, #e91e63, #03a9f4);
+  z-index: 11;
+  mix-blend-mode: screen;
+}
+section .imgbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section .contentbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  min-height: 100vh;
+}
+section .contentbox .formbox {
+  width: 50%;
+}
+section .contentbox .formbox h2 {
+  color: var(--txt);
+  font-weight: 900;
+  font: size 1.5rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  border-bottom: 4px solid var(--pink);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+section .contentbox .formbox .inputbox {
+  margin-bottom: 20px;
+}
+section .contentbox .formbox .inputbox span {
+  display: inline-block;
+  font-weight: 300;
+  color: var(--txt);
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+section .contentbox .formbox .inputbox input {
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 25px;
+  border: 1px solid var(--txt);
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--txt);
+  background: transparent;
+}
+section .contentbox .formbox .inputbox input[type="submit"] {
+  background: var(--pink);
+  border-radius: 20px;
+  color: #fff;
+  outline: none;
+  border: none;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: pointer;
+}
+section .contentbox .formbox .inputbox input[type="submit"]:hover {
+  background: var(--hover);
+}
+
+section .contentbox .formbox .inputbox p {
+  color: var(--txt);
+}
+section .contentbox .formbox .inputbox a {
+  color: var(--pink);
+}
+section .contentbox .formbox .remember {
+  color: var(--txt);
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+h3 {
+  color: var(--txt);
+  font-weight: 400;
+  text-align: center;
+  margin: 40px 0 10px;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li {
+  list-style: none;
+  margin: 0 7px;
+  text-align: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--txt);
+  cursor: pointer;
+}
+.social li img {
+  transform: scale(0.5);
+  filter: invert(1);
+}
+.social li:hover {
+  background: var(--pink);
+}
+
+@media (max-width: 768px) {
+  section .imgbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  section .contentbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 11111;
+  }
+  section .contentbox .formbox {
+    width: 100%;
+    padding: 30px;
+    margin: 20px;
+    background: rgb(255 255 255 / 0.9);
+  }
+}

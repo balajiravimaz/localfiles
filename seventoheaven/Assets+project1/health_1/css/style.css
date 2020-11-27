@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* colors: 
+midnight-blue: 2c3e50;
+orange: #e74c3c
+*/
+
+:root {
+  --main-color: #2c3e50;
+  --orange: #e74c3c;
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+/* Header */
+
+.logo {
+  text-align: center;
+  padding: 20px 0;
+  color: var(--main-color);
+}
+header .nav {
+  display: flex;
+  justify-content: center;
+  background: #fafafa;
+  text-transform: uppercase;
+}
+header .nav li {
+  text-align: center;
+  padding: 20px;
+}
+header .nav li a {
+  color: var(--main-color);
+  transition: 0.2s;
+  font-size: 1.1rem;
+}
+/* hover */
+header .nav li a:hover {
+  color: var(--orange);
+}
+.about a:hover {
+  color: var(--main-color);
+}
+
+/* About */
+.about {
+  padding: 0 50px;
+}
+.about h1 {
+  color: var(--orange);
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 30px 0;
+  font-size: 1.9rem;
+}
+.about p {
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+.about a {
+  color: var(--orange);
+  font-weight: 700;
+}
+/* show food */
+.food {
+  padding: 0 50px;
+  margin-top: 80px;
+}
+.food .show-food {
+  display: flex;
+  background: var(--main-color);
+  margin-bottom: 30px;
+  width: 100%;
+  color: #fff;
+}
+.text h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-size: 24px;
+}
+.text p {
+  font-weight: 300;
+}
+.food .show-food:nth-child(2) {
+  background: var(--orange);
+}
+.food .show-food .text {
+  padding: 20px;
+}
+/* Tomato */
+.back {
+  width: 80%;
+  margin: 0 auto;
+}
+.back img {
+  width: 100%;
+}
+/* footer */
+footer {
+  background: var(--orange);
+}
+footer p {
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+}
+footer span {
+  color: var(--main-color);
+  font-weight: 500;
+}

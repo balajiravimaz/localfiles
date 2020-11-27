@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trailer Website</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+</head>
+<style>
+	*{
+		margin:0;
+		padding: 0;
+		/*box-sizing: border-box;*/
+	}
+	.banner{
+		position: relative;
+		width: 100%;
+		min-height: 100vh;
+		background-color: #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.banner .content{
+		max-width: 550px;
+	}
+	.banner .content img{
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.banner .content h2{
+		color: #fff;
+		font-weight: 300;
+		font-size: 2em;
+	}
+	.banner .content p{
+		font-size:1.2em;
+		color: #fff;
+		font-weight: 300;
+		margin: 15px 0 25px;
+	}
+	.banner .content a{
+		position: relative;
+		text-transform: uppercase;
+		color: #111;
+		background: #fff;
+		font-weight: 500;
+		display: inline-block;
+		text-decoration: none;
+		padding: 10px 15px;
+		letter-spacing: 1pt;
+	}
+	.trailer{
+		position: fixed;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		z-index: 1000;
+		background: rgba(0,0,0,0.95);
+		width:100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		visibility: hidden;
+		opacity: 0;
+	}
+	.trailer i{
+		position: absolute;
+		color: #fff;
+		font-size: 3em;
+		top:30px;
+		right:100px;
+		cursor: pointer;
+		max-width: 32px;
+	}
+	.trailer iframe{
+		position: relative;
+		width: 100%;
+		height: 450px;
+		max-width: 900px;
+		outline: none;
+	}
+	.trailer.active{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	@media(max-width: 991px){
+		.trailer video{
+			max-width: 90%;
+		}
+	}
+</style>
+<body>
+	<div class="banner">
+		<div class="content">
+			<img src="images/img_2.jpg">
+			<h2>Pirates of the Caribean at the dead end's</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt odit praesentium placeat soluta accusamus repellendus, quaerat doloremque aspernatur vel laborum harum voluptate itaque inventore excepturi odio, corporis alias dolorum incidunt earum fugit? Odit quo dolore consequatur qui! At nesciunt maxime fugiat sunt impedit voluptates, nam blanditiis, laborum, quasi vitae magnam.</p>
+			<a href="#" onclick="toggle();">Read More</a>
+			</div>
+		</div>
+		<div class="trailer">
+			<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+</iframe>
+			<i class="fas fa-times" onclick="toggle();"></i>
+		</div>
+		<script type="text/javascript">
+			function toggle(){
+				var trailer=document.querySelector(".trailer");
+				var video=document.querySelector("iframe");
+				trailer.classList.toggle("active");
+				video.pause();
+				video.currenttime = 0;
+			}
+		</script>
+</body>
+</html>

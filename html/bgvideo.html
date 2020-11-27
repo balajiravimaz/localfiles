@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/maldives.css">
+    <title>Background</title>
+</head>
+
+<body>
+    <div class="hero">
+        <video autoplay loop muted plays-inline id="backvideo">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+        <div class="logo">
+            <img src="img/logom.png">
+        </div>
+        <div class="sidebar">
+            <div class="text-box">
+                <h1>Golden Resort</h1>
+                <h4>Awesome Resrot and Enjoy Fun</h4>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Maldivies</h1>
+            <p>Very good place to visit with your family and friends</p>
+            <div class="btn" id="btn">
+                <img src="img/play.png" id="icon">Watch Video
+            </div>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        var icon = document.getElementById("icon");
+        var backvideo = document.getElementById("backvideo");
+        btn.addEventListener("click", function () {
+            backvideo.style.display = "block";
+            if (backvideo.paused) {
+                backvideo.play();
+                icon.src = "img/pause.png";
+            } else {
+                backvideo.pause();
+                icon.src = "img/play.png";
+            }
+        });
+    </script>
+</body>
+
+</html>

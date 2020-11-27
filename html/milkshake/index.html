@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Milk | Shakes</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="img/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2>Its' not jst Coffee<br> It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis distinctio possimus consectetur ex, praesentium quidem dolores porro iste pariatur, cum hic esse quod, quo corporis. Deleniti cumque doloremque culpa in!</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+            <div class="imgbox">
+                <img src="img/img1.png" class="starbuck">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/thumb1.png" onclick="changeimg('img/img1.png'); changecol('#017143');"></li>
+            <li><img src="img/thumb2.png" onclick="changeimg('img/img2.png'); changecol('#eb7495');"></li>
+            <li><img src="img/thumb3.png" onclick="changeimg('img/img3.png'); changecol('#d752b1');"></li>
+        </ul>
+        <ul class="social">
+            <li><a href="#"><img src="img/facebook.png"></a></li> 
+            <li><a href="#"><img src="img/instagram.png"></a></li>
+            <li><a href="#"><img src="img/twitter.png"></a></li>
+        </ul>
+    </section>
+    <script>
+        function changeimg(imgs){
+            document.querySelector(".starbuck").src= imgs;
+        }
+        function changecol(col){
+            document.querySelector(".circle").style.backgroundColor=col;
+        }
+        </script>
+</body>
+</html>

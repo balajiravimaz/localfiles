@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Get Text</button>
+    <div class="output1">
+      <h3>Corona Cases</h3>
+      <span class="counter" id="case"></span>
+    </div>
+    <div class="output2">
+      <h3>Corono Deaths</h3>
+      <div class="death"></div>
+    </div>
+    <div class="output3">
+      <h3>Recovered</h3>
+      <div class="recover"></div>
+    </div>
+    <span class="count">1,234,567</span>
+    <!-- <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      </head>
+      <body> -->
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div id="collapse1" class="panel-collapse collapse">
+              <div class="panel-body">Panel Body</div>
+              <div class="panel-footer">Panel Footer</div>
+            </div>
+
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#collapse1"
+                  >Collapsible panel</a
+                >
+              </h4>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+    <script>
+      document.getElementById("btn").addEventListener("click", getData);
+      function getData() {
+        fetch("https://covid19.mathdro.id/api")
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            document.querySelector("#case").innerHTML = data.confirmed.value;
+            document.querySelector(".death").innerHTML = data.deaths.value;
+            document.querySelector(".recover").innerHTML = data.recovered.value;
+          });
+      }
+      getData();
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+      integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script>
+      $(function () {
+        $(".count").counterUp({
+          delay: 15,
+          time: 1000,
+        });
+      });
+    </script>
+  </body>
+</html>

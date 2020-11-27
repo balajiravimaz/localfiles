@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style1.css" />
+    <title>Fit | Strong</title>
+  </head>
+  <body>
+    <section>
+      <header>
+        <a href="#" class="logo">Fitness</a>
+        <div class="toogle" onclick="togle()"></div>
+        <ul class="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="contentbox">
+          <h2>
+            Build Perfect Body <br />
+            with Clean Mind
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
+            quas commodi nulla nostrum eius, est harum suscipit totam magnam
+            dolorem deserunt repellendus quidem blanditiis recusandae.
+          </p>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+      </div>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="img/facebook.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/instagram.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/twitter.png" alt="" /></a>
+        </li>
+      </ul>
+    </section>
+    <script>
+      function togle() {
+        let menu = document.querySelector(".toogle");
+        let nav = document.querySelector(".nav");
+        menu.classList.toggle("active");
+        nav.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

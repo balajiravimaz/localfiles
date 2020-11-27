@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Website</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      section {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background: #111;
+        transition: 0.5s ease-in-out;
+      }
+      header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 40px 100px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
+      header .logo {
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .toggle {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: url("img/menu.png");
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center;
+        cursor: pointer;
+      }
+      .toggle.active {
+        background: url("img/close.png");
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: center;
+        cursor: pointer;
+      }
+      section video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to left, #00f, #f00);
+        mix-blend-mode: overlay;
+      }
+      .text {
+        position: relative;
+        z-index: 10;
+      }
+      .text h2 {
+        color: #fff;
+        font-size: 4rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+      .text h3 {
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 1.5;
+      }
+      .text p {
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin: 15px 0;
+        max-width: 760px;
+      }
+      .text a {
+        text-decoration: none;
+        background: #fff;
+        color: #111;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        letter-spacing: 1;
+        font-weight: 600;
+        margin-top: 15px;
+        display: inline-block;
+      }
+      .social {
+        position: absolute;
+        bottom: 10px;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .social li {
+        list-style: none;
+      }
+      .social a {
+        margin-right: 15px;
+        display: inline-block;
+        filter: invert(1);
+        transform: scale(0.6);
+      }
+      .menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        background: #fff;
+        /* z-index: 20; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .menu li {
+        list-style: none;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .menu li a {
+        text-decoration: none;
+        position: relative;
+        font-size: 24px;
+        padding-bottom: 5px;
+        color: #111;
+      }
+      .banner.active {
+        right: 300px;
+      }
+      .menu li a::after {
+        content: "";
+        width: 0;
+        height: 5px;
+        position: absolute;
+        background: blue;
+        left: 0;
+        bottom: 0;
+        transition: width 0.5s;
+      }
+      .menu li a:hover::after {
+        width: 100%;
+      }
+      @media (max-width: 991px) {
+        section,
+        section header {
+          padding: 40px;
+        }
+        .text h2 {
+          font-size: 3rem;
+        }
+        .text h3 {
+          font-size: 2rem;
+        }
+      }
+      @media (max-width: 385px) {
+        section,
+        section header {
+          padding: 10px;
+        }
+        .text h2 {
+          font-size: 2rem;
+        }
+        .text h3 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <ul>
+        <li><a href="#" onclick="toggler();">Home</a></li>
+        <li><a href="#" onclick="toggler();">Features</a></li>
+        <li><a href="#" onclick="toggler();">Services</a></li>
+        <li><a href="#" onclick="toggler();">Clients</a></li>
+        <li><a href="#" onclick="toggler();">About</a></li>
+      </ul>
+    </div>
+    <section class="banner">
+      <header>
+        <h2 class="logo">Fit | Gym</h2>
+        <div class="toggle" onclick="toggler();"></div>
+      </header>
+      <video src="img/production ID_4753946.mp4" autoplay loop muted></video>
+      <div class="overlay"></div>
+      <div class="text">
+        <h2>be stronger</h2>
+        <h3>Never Give Up</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolore
+          ipsa eius sunt earum veniam, accusantium, a ea eum voluptatem
+          distinctio! Iure molestias tenetur asperiores. Fugit molestiae
+          dignissimos, quia voluptatibus, culpa magnam impedit itaque
+          necessitatibus, recusandae id sapiente repellendus corrupti?
+        </p>
+        <a href="#">Join us</a>
+      </div>
+      <ul class="social">
+        <li>
+          <a href="#"><img src="img/facebook.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/twitter.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/instagram.png" /></a>
+        </li>
+      </ul>
+    </section>
+    <script>
+      function toggler() {
+        var menu = document.querySelector(".toggle");
+        var banner = document.querySelector(".banner");
+        menu.classList.toggle("active");
+        banner.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
